@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sql-formatter demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <textarea id="sql-input" autofocus="true" oninput="formatSqlInput()" wrap="off" rows="10" style="height:100%;">
+              SELECT supplier_name, city FROM suppliers
+              WHERE supplier_id > 500
+              ORDER BY supplier_name ASC, city DESC;
+            </textarea>
+        </div>
+
+        <div class="col">
+            <textarea id="sql-formatted" readonly=readonly wrap="off" class="form-control" rows="10" style="height:100%;"></textarea>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="sql-formatter-demo-opt.js"></script>
+</body>
+</html>
